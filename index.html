@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TestApp</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/fonts/fonts.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/media.css">
+	<script src="assets/JS/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#ra").click(function(){
+				$('#first').animate({width: 'toggle'});
+			})
+		});
+		$(function(){
+			$("#la").click(function(){
+				$("#second").animate({width: 'toggle'});
+			})
+		});
+		$(function(){
+			function footerToBottom() {
+				var browserHeight = $(window).height(),
+				footerOuterHeight = $('footer').outerHeight(true),
+				mainHeightMarginPaddingBorder = $('#maincontent').outerHeight(true) - $('#maincontent').height();
+				$('#maincontent').css({
+				'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder,
+				});
+				};
+				footerToBottom();
+				$(window).resize(function () {
+				footerToBottom();
+				});
+		});
+		
+
+
+	</script>
+</head>
+<body>
+			<header>
+				<p>Нужен сайт?   Ты по адресу!</p>
+				<button id="ra">Почему мы?</button>
+				<button id="la">Наши контакты</button>
+			</header>
+
+		<section id="maincontent">
+			<div id="content">
+				<div id="rp">
+					
+				</div>
+				<div id="header">
+				</div>
+				<div id="onscreen">
+					<div id="image">
+					</div>
+					<p>
+						Разработка web-сайтов — процесс, который должен приносить заказчику не меньшее удовольствие, чем готовый результат. К этому и стремится WhiteWeb, создавая все условия для комфортного сотрудничества. У нас не бывает одинаковых проектов: каждый сайт — это отдельная история, требующая поиска новых решений, внедрения новых процессов и технологий.
+					</p>
+				</div>
+				<aside id="first">
+					<p>надёжность</p>
+					<p id="sattext">
+						Гарантии, открытость и никакого «шаманства»
+                        Мы сделали процесс создания сайта и ведения рекламной компании абсолютно прозрачным для заказчика. На каждом этапе он может получить исчерпывающую информацию о том, что, почему и зачем делается в рамках его проекта. Никаких скрытых манипуляций или «шаманства» мы не проводим. Выбирая нас, заказчик получает гарантию честной цены на качественную услугу.
+					</p>
+				</aside>
+				<aside id="second">
+					<p>Свяжитесь с нами!</p>
+					<div id="ii">
+						<i class="fa fa-mobile"><p>16465421554</p></i>
+						<i class="fa fa-envelope"><p>somemail@.com</p></i>
+						
+						<i class="fa fa-facebook-official"><p>somename</p></i>
+						
+						<i class="fa fa-skype"><p>somename</p></i>
+
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<footer>Somecompany Inc. 2018</footer>
+</body>
+</html>
